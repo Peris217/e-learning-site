@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Progress Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="progress.html" class="active">Progress</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <section class="content">
+      <h1>Your Learning Progress</h1>
+      <p>Check the lessons you've completed:</p>
+
+      <div class="progress-box">
+        <h2>HTML Course</h2>
+        <label><input type="checkbox" /> Introduction to HTML</label><br />
+        <label><input type="checkbox" /> HTML Tags</label><br />
+        <label><input type="checkbox" /> Images & Links</label><br />
+        <label><input type="checkbox" /> Lists & Tables</label><br />
+      </div>
+
+      <div class="progress-box">
+        <h2>CSS Course</h2>
+        <label><input type="checkbox" /> CSS Basics</label><br />
+        <label><input type="checkbox" /> Colors & Fonts</label><br />
+        <label><input type="checkbox" /> Layout & Box Model</label><br />
+        <label><input type="checkbox" /> Flexbox</label><br />
+      </div>
+    </section>
+
+    <script>
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+      checkboxes.forEach((checkbox, index) => {
+        // Load saved state
+        checkbox.checked = localStorage.getItem("lesson" + index) === "true";
+
+        // Save state when checkbox is clicked
+        checkbox.addEventListener("change", () => {
+          localStorage.setItem("lesson" + index, checkbox.checked);
+        });
+      });
+    </script>
+  </body>
+</html>

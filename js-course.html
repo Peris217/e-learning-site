@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Course</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="progress.html">Progress</a>
+    </nav>
+
+    <section class="content">
+      <h1>JavaScript Course</h1>
+      <p>
+        Welcome! Here you’ll learn how to make web pages interactive using
+        JavaScript.
+      </p>
+
+      <hr />
+
+      <h2>Lesson 1: What is JavaScript?</h2>
+      <p>
+        JavaScript is a programming language used to make web pages interactive.
+      </p>
+
+      <pre>
+// Example
+alert("Hello, world!");
+    </pre
+      >
+
+      <hr />
+
+      <h2>Lesson 2: Variables</h2>
+      <p>Variables store data values.</p>
+
+      <pre>
+let name = "Peris";
+let age = 20;
+
+console.log(name);
+console.log(age);
+    </pre
+      >
+
+      <hr />
+
+      <h2>Lesson 3: Functions</h2>
+      <p>Functions are reusable blocks of code.</p>
+
+      <pre>
+function greet() {
+    console.log("Hello!");
+}
+
+greet();
+    </pre
+      >
+
+      <hr />
+
+      <h2>Lesson 4: Buttons & Events</h2>
+      <p>You can make things happen when a user clicks a button.</p>
+
+      <pre>
+<button onclick="changeText()">Click Me</button>
+
+<script>
+function changeText() {
+    alert("Button Clicked!");
+}
+</script>
+    </pre>
+
+      <hr />
+
+      <h2>Lesson 5: Changing Content on a Page</h2>
+      <p>JavaScript can update HTML instantly.</p>
+
+      <pre>
+<p id="demo">Original Text</p>
+<button onclick="document.getElementById('demo').innerHTML = 'Text Updated!'">Change</button>
+    </pre>
+    </section>
+  </body>
+</html>
